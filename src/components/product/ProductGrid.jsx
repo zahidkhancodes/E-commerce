@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 import { useLocation } from "react-router-dom";
 
 
-function ProductGrid(ele) {
+function ProductGrid(props) {
   const location = useLocation();
 
   return (
@@ -16,8 +16,8 @@ function ProductGrid(ele) {
       )}
 
       <div className="product-grid">
-        {ele.prod.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {props.prod.map((product) => (
+          <ProductCard key={product.id} product={product} addToCart={props.addToCart}/>
         ))}
       </div>
     </>

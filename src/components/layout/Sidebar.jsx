@@ -10,7 +10,7 @@ import {
   FiSettings,
 } from "react-icons/fi";
 
-function Sidebar() {
+function Sidebar(ele) {
   return (
     <div className="sidebar">
       <div className="logo">
@@ -33,7 +33,7 @@ function Sidebar() {
 
         <NavLink to="/cart" className="nav-item cart-link">
           <FiShoppingCart /> <span>Cart</span>
-          <span className="cart-badge">3</span>
+          <span className="cart-badge">{ele.cartValue}</span>
         </NavLink>
 
         {/* <NavLink to="/orders" className="nav-item">
